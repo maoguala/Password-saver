@@ -9,12 +9,16 @@
 //std::string log_File_Path = "file_log.log";
 std::ifstream in;
 std::ofstream out;
+std::ifstream in_a;
+std::ofstream out_a;
 
 time_t log_wrote_time = time(0); //Get the time from now
 struct tm *ltm = localtime(&log_wrote_time); //Get the structure from time of local
 
-std::string Log_Directory = "./Log/";
+std::string Log_Directory = "./log/";
 std::string Log_file = Log_Directory + "pswd.log";
+std::string pswd_save_Dir = "./pswd/";
+std::string pswd_save = pswd_save_Dir + "password.txt";
 
 std::string str_password = ""; //saved password
 std::string check_str_password = ""; //check password
